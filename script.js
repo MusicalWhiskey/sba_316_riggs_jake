@@ -13,11 +13,22 @@ let awaitingEndOfMove = false;
 function makeCard(color) {
 	const element = document.createElement("div");
 
+    element.style.borderRadius = "12px";
+    
+    element.style.padding = "10px";
+
 	element.classList.add("card");
 
 	element.setAttribute("data-color", color);
 
 	element.setAttribute("data-revealed", "false");
+
+    element.addEventListener("mouseover", () => {
+        element.classList.add("highlight");
+    })
+    element.addEventListener("mouseout", () => {
+        element.classList.remove("highlight");
+    })
 
 	element.addEventListener("click", () => {
 		const revealed = element.getAttribute("data-revealed");
@@ -89,11 +100,3 @@ const instructionElement = document.querySelector("p");
     instructionElement.style.color = "gray";
     instructionElement.style.fontSize = "32px";
     instructionElement.style.textAlign = "center";
-
-element.style.borderRadius = "25px";
-element.addEventListener("mouseover", () => {
-    element.classList.add("highlight");
-})
-element.addEventListener("mouseout", () => {
-    element.classList.remove("highlight");
-})
