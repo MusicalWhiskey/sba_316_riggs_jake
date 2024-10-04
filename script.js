@@ -108,10 +108,13 @@ const titleElement = document.getElementById("title");
     titleElement.style.textAlign = "center";
     titleElement.style.fontSize = "100px";
 
-const instructionElement = document.querySelector("p");
-    instructionElement.style.color = "gray";
-    instructionElement.style.fontSize = "32px";
-    instructionElement.style.textAlign = "center";
+const instructionElement = document.querySelectorAll("p");
+instructionElement.forEach((element) => {
+    element.style.color = "gray";
+    element.style.fontSize = "32px";
+    element.style.textAlign = "center";
+});
+    
 
 const wicked = document.getElementById("wicked");
 wicked.addEventListener("mouseover", () => {
@@ -131,15 +134,26 @@ const identity = document.createElement("form");
     identity.action = "/submit";
     identity.method = "POST";
 
-const playerName = document.getElementById("playerName");
-    playerName.style.textAlign = "center";
-    playerName.style.fontSize = "40px";
-    playerName.style.color = "gray";
-    playerName.style.padding = "20px";
-
 const tellMe = document.getElementById("button");
     tellMe.style.fontSize = "30px";
 
 const enterName = document.getElementById("input");
     enterName.style.fontSize = "30px";
 
+const playerName = document.getElementById("playerName");
+    playerName.style.textAlign = "center";
+    playerName.style.fontSize = "40px";
+    playerName.style.color = "gray";
+    playerName.style.padding = "20px";
+
+    playerForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        window.addEventListener("submit", () => {
+            window.alert(`Don't Mess This Up, ${playerName}!`);
+        });
+        
+
+        const playerName = playerNameInput.value;
+        outputDiv.textContent = `Welcome, ${playerName}!`;
+    });
