@@ -50,7 +50,7 @@ function makeCard(color) {
 			revealedCount += 2;
 
 			if (revealedCount === cardCount) {
-				alert("You win! Refresh to start again.");
+				alert("Fine. I won't do what I was gonna do... (Refresh to play again)");
 			}
 
 			return;
@@ -91,3 +91,9 @@ const instructionElement = document.querySelector("p");
     instructionElement.style.textAlign = "center";
 
 element.style.borderRadius = "25px";
+element.addEventListener("mouseover", () => {
+    element.classList.add("highlight");
+})
+element.addEventListener("mouseout", () => {
+    element.classList.remove("highlight");
+})
