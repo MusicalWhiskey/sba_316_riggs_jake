@@ -1,7 +1,7 @@
 console.log("SBA 316");
 
 const cardsContainer = document.querySelector(".cards");
-const colors = ["blue", "orange", "red", "white", "yellow", "green", "brown", "teal"];
+const colors = ["blue", "orange", "red", "white", "yellow", "green", "brown", "teal", "purple"];
 const colorsPicklist = [...colors, ...colors];
 const cardCount = colorsPicklist.length;
 
