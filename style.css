@@ -1,5 +1,6 @@
 body {
-	background:  rgb(0, 0, 0);
+	background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 38%, rgba(121,9,9,1) 100%, rgba(101,8,8,1) 100%);
 	margin: 0;
 }
 
@@ -16,6 +17,7 @@ body {
 .card {
 	height: 100px;
 	background: rgb(94, 2, 2);
-	border: 5px solid rgb(52, 1, 1);
+	border: 5px solid rgb(62, 62, 62);
 	cursor: pointer;
+    padding: 10px;
 }   
