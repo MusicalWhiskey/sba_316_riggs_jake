@@ -3,11 +3,6 @@ console.log("SBA 316");
 const userLanguage = navigator.language;
 console.log(`User language: ${userLanguage}`);
 
-// window.addEventListener("load", () => {
-//     window.alert("Don't Mess This Up!");
-// });
-
-
 const cardsContainer = document.querySelector(".cards");
 const colors = ["blue", "orange", "red", "gray", "yellow", "green", "brown", "teal", "purple"];
 const colorsPicklist = [...colors, ...colors];
@@ -68,11 +63,11 @@ function makeCard(color) {
 			awaitingEndOfMove = false;
 			revealedCount += 2;
 
-            progressElement.innerText = "...keep going..."
+            progressElement.innerText = "...keep going...";
 
 
 			if (revealedCount === cardCount) {
-				alert("Fine. I won't do what I was gonna do... (Refresh to play again)");
+				alert(`Fine. I won't do what I was gonna do... (Refresh to play again)`);
 			}
 
 			return;
@@ -130,9 +125,7 @@ const progressElement = document.getElementById("progress");
     progressElement.style.textAlign = "center";
     // progressElement.innerText = "...keep going..."
 
-const identity = document.createElement("form");
-    identity.action = "/submit";
-    identity.method = "POST";
+const greetingElement = document.getElementById("greeting");
 
 const tellMe = document.getElementById("button");
     tellMe.style.fontSize = "30px";
@@ -146,14 +139,18 @@ const playerName = document.getElementById("playerName");
     playerName.style.color = "gray";
     playerName.style.padding = "20px";
 
-    playerForm.addEventListener("submit", function (event) {
+const playerNameInput = document.getElementById("input");
+const outputDiv = document.getElementById("output");
+
+    playerName.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent form submission
+        
+    const playerID = playerNameInput.value;
+        greetingElement.innerText = `Greetings, ${playerID}`;
 
         window.addEventListener("submit", () => {
-            window.alert(`Don't Mess This Up, ${playerName}!`);
-        });
-        
+            window.alert(`Don't Mess This Up, ${playerID}!`);
 
-        const playerName = playerNameInput.value;
-        outputDiv.textContent = `Welcome, ${playerName}!`;
+            playerNameForm.style.display = "none";
+        });
     });
