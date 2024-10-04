@@ -30,7 +30,7 @@ function makeCard(color) {
 			return;
 		}
 
-		// Display this color card
+		// Display this card color
 		element.style.backgroundColor = color;
 
 		if (!selectedCard) {
@@ -70,7 +70,7 @@ function makeCard(color) {
 	return element;
 }
 
-// Build up cards
+// Make the cards
 for (let i = 0; i < cardCount; i++) {
 	const randomIndex = Math.floor(Math.random() * colorsPicklist.length);
 	const color = colorsPicklist[randomIndex];
@@ -82,3 +82,5 @@ for (let i = 0; i < cardCount; i++) {
 
 const titleElement = document.getElementById("title").style.color = "white";
 titleElement.style.textAlign = "center";
+
+cards = document.getElementsByClassName("card").style.borderRadius = "25%";
