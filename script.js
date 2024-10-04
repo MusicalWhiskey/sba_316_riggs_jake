@@ -68,6 +68,9 @@ function makeCard(color) {
 			awaitingEndOfMove = false;
 			revealedCount += 2;
 
+            progressElement.innerText = "...keep going..."
+
+            
 			if (revealedCount === cardCount) {
 				alert("Fine. I won't do what I was gonna do... (Refresh to play again)");
 			}
@@ -117,3 +120,9 @@ wicked.addEventListener("mouseover", () => {
 wicked.addEventListener("mouseout", () => {
     wicked.style.color = "";
 })
+
+const progressElement = document.getElementById("progress");
+    progressElement.style.color = "gray";
+    progressElement.style.fontSize = "24px";
+    progressElement.style.textAlign = "center";
+    // progressElement.innerText = "...keep going..."
