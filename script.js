@@ -3,9 +3,9 @@ console.log("SBA 316");
 const userLanguage = navigator.language;
 console.log(`User language: ${userLanguage}`);
 
-window.addEventListener("load", () => {
-    window.alert("Don't Mess This Up!");
-});
+// window.addEventListener("load", () => {
+//     window.alert("Don't Mess This Up!");
+// });
 
 
 const cardsContainer = document.querySelector(".cards");
@@ -70,7 +70,7 @@ function makeCard(color) {
 
             progressElement.innerText = "...keep going..."
 
-            
+
 			if (revealedCount === cardCount) {
 				alert("Fine. I won't do what I was gonna do... (Refresh to play again)");
 			}
@@ -86,7 +86,7 @@ function makeCard(color) {
 
 			awaitingEndOfMove = false;
 			selectedCard = null;
-		}, 1000);
+		}, 200);
 	});
 
 	return element;
@@ -126,3 +126,20 @@ const progressElement = document.getElementById("progress");
     progressElement.style.fontSize = "24px";
     progressElement.style.textAlign = "center";
     // progressElement.innerText = "...keep going..."
+
+const identity = document.createElement("form");
+    identity.action = "/submit";
+    identity.method = "POST";
+
+const playerName = document.getElementById("playerName");
+    playerName.style.textAlign = "center";
+    playerName.style.fontSize = "40px";
+    playerName.style.color = "gray";
+    playerName.style.padding = "20px";
+
+const tellMe = document.getElementById("button");
+    tellMe.style.fontSize = "30px";
+
+const enterName = document.getElementById("input");
+    enterName.style.fontSize = "30px";
+
