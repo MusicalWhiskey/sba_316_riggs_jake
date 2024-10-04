@@ -83,3 +83,6 @@ for (let i = 0; i < cardCount; i++) {
 const titleElement = document.getElementById("title");
     titleElement.style.color = "gray";
     titleElement.style.textAlign = "center";
+    titleElement.style.fontSize = "100px";
+
+element.style.borderRadius = "25px";
