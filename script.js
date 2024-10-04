@@ -85,4 +85,9 @@ const titleElement = document.getElementById("title");
     titleElement.style.textAlign = "center";
     titleElement.style.fontSize = "100px";
 
+const instructionElement = document.querySelector("p");
+    instructionElement.style.color = "gray";
+    instructionElement.style.fontSize = "32px";
+    instructionElement.style.textAlign = "center";
+
 element.style.borderRadius = "25px";
