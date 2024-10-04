@@ -23,12 +23,12 @@ function makeCard(color) {
 
 	element.setAttribute("data-revealed", "false");
 
-    element.addEventListener("mouseover", () => {
-        element.classList.add("highlight");
-    })
-    element.addEventListener("mouseout", () => {
-        element.classList.remove("highlight");
-    })
+    // element.addEventListener("mouseover", () => {
+    //     element.classList.add("highlight");
+    // })
+    // element.addEventListener("mouseout", () => {
+    //     element.classList.remove("highlight");
+    // })
 
 	element.addEventListener("click", () => {
 		const revealed = element.getAttribute("data-revealed");
@@ -100,3 +100,14 @@ const instructionElement = document.querySelector("p");
     instructionElement.style.color = "gray";
     instructionElement.style.fontSize = "32px";
     instructionElement.style.textAlign = "center";
+
+const wicked = document.getElementById("wicked");
+wicked.addEventListener("mouseover", () => {
+    wicked.style.color = "red";
+})
+wicked.addEventListener("mouseout", () => {
+    wicked.style.color = "";
+})
+
+
+    window.screen.orientation
