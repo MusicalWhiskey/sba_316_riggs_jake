@@ -1,5 +1,8 @@
 console.log("SBA 316");
 
+const userLanguage = navigator.language;
+console.log(`User language: ${userLanguage}`);
+
 const cardsContainer = document.querySelector(".cards");
 const colors = ["blue", "orange", "red", "gray", "yellow", "green", "brown", "teal", "purple"];
 const colorsPicklist = [...colors, ...colors];
@@ -108,6 +111,7 @@ wicked.addEventListener("mouseover", () => {
 wicked.addEventListener("mouseout", () => {
     wicked.style.color = "";
 })
+
 
 
     window.screen.orientation
