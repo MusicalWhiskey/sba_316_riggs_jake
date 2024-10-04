@@ -3,6 +3,11 @@ console.log("SBA 316");
 const userLanguage = navigator.language;
 console.log(`User language: ${userLanguage}`);
 
+window.addEventListener("load", () => {
+    window.alert("Don't Mess This Up!");
+});
+
+
 const cardsContainer = document.querySelector(".cards");
 const colors = ["blue", "orange", "red", "gray", "yellow", "green", "brown", "teal", "purple"];
 const colorsPicklist = [...colors, ...colors];
@@ -92,6 +97,7 @@ for (let i = 0; i < cardCount; i++) {
 
 	colorsPicklist.splice(randomIndex, 1);
 	cardsContainer.appendChild(card);
+    
 }
 
 const titleElement = document.getElementById("title");
@@ -111,7 +117,3 @@ wicked.addEventListener("mouseover", () => {
 wicked.addEventListener("mouseout", () => {
     wicked.style.color = "";
 })
-
-
-
-    window.screen.orientation
