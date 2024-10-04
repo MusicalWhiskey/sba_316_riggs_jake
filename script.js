@@ -1,7 +1,7 @@
 console.log("SBA 316");
 
 const cardsContainer = document.querySelector(".cards");
-const colors = ["blue", "orange", "red", "white", "yellow", "green", "brown", "teal", "purple"];
+const colors = ["blue", "orange", "red", "gray", "yellow", "green", "brown", "teal", "purple"];
 const colorsPicklist = [...colors, ...colors];
 const cardCount = colorsPicklist.length;
 
@@ -80,5 +80,6 @@ for (let i = 0; i < cardCount; i++) {
 	cardsContainer.appendChild(card);
 }
 
-const titleElement = document.getElementsByID("title").style.color = "white";
-titleElement.style.textAlign = "center";
+const titleElement = document.getElementById("title");
+    titleElement.style.color = "gray";
+    titleElement.style.textAlign = "center";
