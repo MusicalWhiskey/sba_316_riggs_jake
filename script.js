@@ -5,7 +5,7 @@ const colors = ["blue", "orange", "red", "white", "yellow", "green", "brown", "t
 const colorsPicklist = [...colors, ...colors];
 const cardCount = colorsPicklist.length;
 
-// Game state
+// Game State Start
 let revealedCount = 0;
 let selectedCard = null;
 let awaitingEndOfMove = false;
@@ -80,7 +80,5 @@ for (let i = 0; i < cardCount; i++) {
 	cardsContainer.appendChild(card);
 }
 
-const titleElement = document.getElementById("title").style.color = "white";
+const titleElement = document.getElementsByID("title").style.color = "white";
 titleElement.style.textAlign = "center";
-
-cards = document.getElementsByClassName("card").style.borderRadius = "25%";
